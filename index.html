@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="month"></p>
+    <p id="date"></p>
+    <p id="year"></p>
+    <p id="hours"></p>
+    <p id="minutes"></p>
+    <p id="seconds"></p>
+    <p id="greetings"></p>
+
+
+    
+    <script>
+
+    const a = new Date();
+	let year = a.getFullYear();
+	document.getElementById("year").innerHTML = year;
+
+    const b = new Date();
+    let month = b.getMonth()+1;
+    document.getElementById("month").innerHTML = month;
+
+    const c = new Date();
+	let day = c.getDate();
+	document.getElementById("date").innerHTML = day;
+
+	const d = new Date();
+	let hour = d.getHours();
+	document.getElementById("hours").innerHTML = hour;
+
+	const e = new Date();
+	let minutes = e.getMinutes();
+	document.getElementById("minutes").innerHTML = minutes;
+
+	const f = new Date();
+	let seconds = f.getSeconds();
+	document.getElementById("seconds").innerHTML = seconds;
+    </script>
+
+    <script>
+        const time = new Date().getHours();
+        let greeting;
+        if (time < 11) {
+          greeting = "Good morning";
+        } else if (time < 17) {
+          greeting = "Good afternoon";
+        } else {
+          greeting = "Good evening";
+        }
+        document.getElementById("greetings").innerHTML = greeting;
+    </script>
+
+    <h1>Favorite Foods</h1>
+    <input id="myInput" type="text">
+    <p id="demo"></p>
+
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+          var text;
+          var fruits = document.getElementById("myInput").value;
+        
+          switch(fruits) {
+            case "Chimken Curry":
+              text = "Chimken curry is my favorite!";
+            break;
+            case "Chimken Adobo":
+            text = "Chimken Adobo is my favorite!";
+            break;
+            case "Tortang Talong":
+            text = "Tortang Talong is my favorite!";
+            break;
+            case "Corn Beef":
+            text= "Corn beef is my favorite!";
+            break;
+            default:
+            text = "Fav food not found >.<";
+          }
+          document.getElementById("demo").innerHTML = text;
+        }
+        </script>
+    
+
+
+
+
+
+</body>
+</html>
